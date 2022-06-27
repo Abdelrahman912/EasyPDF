@@ -9,10 +9,26 @@ namespace EasyPDF
         {
             var para = new Paragraph(title)
                           .SetTextAlignment(TextAlignment.CENTER)
-                          .SetFontSize(22)
+                          .SetFontSize(20)
                           .SetBold()
                           .SetUnderline();
                          
+            return para;
+        }
+
+        public static Paragraph AsSubTitle(this string subTitle)
+        {
+            var para = new Paragraph(subTitle)
+                          .SetTextAlignment(TextAlignment.LEFT)
+                          .SetFontSize(16)
+                          .SetBold();
+            return para;
+        }
+        public static Paragraph AsText(this string text)
+        {
+            var para = new Paragraph(text)
+                          .SetTextAlignment(TextAlignment.LEFT)
+                          .SetFontSize(14);
             return para;
         }
     }
