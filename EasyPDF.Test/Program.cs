@@ -8,7 +8,12 @@ namespace EasyPDF.Test
         {
             Console.WriteLine("Hello World!");
             var fileName = @"D:\Work\Programming\hamada.pdf";
-            fileName.WritePdf(doc => { "Test".AsTitle().AddToDocument(doc); return true; });
+            fileName.WritePdf((pdf,doc) => 
+            { 
+                "Test".AsTitle().AddToDocument(doc); 
+                pdf.AddPageNumberAsFooter(doc);
+                return true; 
+            });
         }
     }
 }
