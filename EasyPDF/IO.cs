@@ -11,7 +11,7 @@ namespace EasyPDF
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="fileName">File full path</param>
-        /// <param name="func"></param>
+        /// <param name="func">Pdf creation logic</param>
         /// <returns></returns>
         public static T WritePdf<T>(this string fileName,Func<PdfDocument,Document,T> func)
         {
