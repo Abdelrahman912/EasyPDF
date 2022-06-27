@@ -6,6 +6,13 @@ namespace EasyPDF
 {
     public static class IO
     {
+        /// <summary>
+        /// Write Pdf to the specified File.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="fileName">File full path</param>
+        /// <param name="func"></param>
+        /// <returns></returns>
         public static T WritePdf<T>(this string fileName,Func<PdfDocument,Document,T> func)
         {
             using (var writer = new PdfWriter(fileName))
