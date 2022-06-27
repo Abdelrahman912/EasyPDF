@@ -30,5 +30,11 @@ namespace EasyPDF
                       });
         }
 
+        public static void AddNewLine(this Document doc)
+        {
+            Paragraph newline = new Paragraph(new Text("\n"));
+
+            doc.Add(newline);
+        }
     }
 }

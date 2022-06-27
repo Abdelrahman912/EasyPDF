@@ -22,7 +22,7 @@ namespace EasyPDF
         {
             var cell = new Cell(1, 1)
                            .SetTextAlignment(TextAlignment.LEFT)
-                           .SetFontSize(14)
+                           .SetFontSize(12)
                            .Add(new Paragraph(text));
             return cell;
         }
@@ -30,7 +30,7 @@ namespace EasyPDF
         {
             var cell = new Cell(1, 1)
                            .SetTextAlignment(TextAlignment.LEFT)
-                           .SetFontSize(14)
+                           .SetFontSize(12)
                            .Add(new Paragraph(text));
             return cell;
         }
